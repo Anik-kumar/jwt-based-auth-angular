@@ -1,1 +1,10 @@
-<p>layout works!</p>
+<div class="navbar bg-base-300 flex justify-between">
+  <div>
+    <a class="btn btn-ghost text-xl">DASHBOARD</a>
+  </div>
+  <div>
+    <a class="btn btn-ghost text-secondary" (click)="logout()">Logout</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

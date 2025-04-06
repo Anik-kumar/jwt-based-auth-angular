@@ -9,19 +9,25 @@ import { RegistrationComponent } from './components/registration/registration.co
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    pathMatch: "full"
   },
-  {
-    path: '',
-    // component: DashboardComponent,
-    redirectTo: 'login',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   // component: DashboardComponent,
+  //   redirectTo: 'login',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'signup',
     component: RegistrationComponent,
     pathMatch: 'full'
   },
+  // {
+  //   path: 'dashboard',
+  //   component: DashboardComponent,
+  //   pathMatch: "full"
+  // },
   {
     path: '',
     component: LayoutComponent,
