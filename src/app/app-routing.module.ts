@@ -12,12 +12,12 @@ const routes: Routes = [
     component: LoginComponent,
     pathMatch: "full"
   },
-  // {
-  //   path: '',
-  //   // component: DashboardComponent,
-  //   redirectTo: 'login',
-  //   pathMatch: 'full'
-  // },
+  {
+    path: '',
+    // component: DashboardComponent,
+    redirectTo: 'login',
+    pathMatch: 'full'
+  }, 
   {
     path: 'signup',
     component: RegistrationComponent,
