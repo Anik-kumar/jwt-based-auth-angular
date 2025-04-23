@@ -32,8 +32,9 @@ export class LoginComponent implements OnInit {
     //
     this.http
       .post('http://localhost:3000/api/login', this.form.getRawValue())
-      .subscribe((resp) => {
-        console.log('login resp ', resp);
+      .subscribe((resp: any) => {
+        console.log('login resp ', resp.message);
+        localStorage.setItem('at', resp.token);
         this.router.navigate(['/dashboard']);
       });
     // this.router.navigateByUrl('/dashboard');

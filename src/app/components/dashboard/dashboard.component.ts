@@ -13,8 +13,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('http://localhost:3000/api/user', {withCredentials: true}).subscribe(
-      (resp) => {
+      (resp: any) => {
         console.log('resp ', resp);
+        if(resp.email) {
+          this.message = `Welcome ${resp.name}` 
+        }
       },
       (err) => {
         console.log('error ', err);
